@@ -6,6 +6,8 @@ import Register from "../Components/Login/Register";
 import AvailableLoan from "../Pages/AvailableLoan/AvailableLoan";
 import LoanDetails from "../Pages/LoanDetails";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import DashBoardLayout from "../Layout/DashBoardLayout";
+import LoanApplication from "../Pages/LoanApplication";
 
 
 export const router = createBrowserRouter([
@@ -29,7 +31,17 @@ export const router = createBrowserRouter([
         path:"/loans/:id",
         element:<PrivetRoute><LoanDetails></LoanDetails></PrivetRoute>
        
+      },{
+        path:"loan-application/:id",
+        Component:LoanApplication
       }
     ]
-  },
+  },{
+    path:"/dashboard",
+    element:<PrivetRoute><DashBoardLayout></DashBoardLayout></PrivetRoute>,
+    children:[{
+      index:true,
+      
+    }]
+  }
 ]);

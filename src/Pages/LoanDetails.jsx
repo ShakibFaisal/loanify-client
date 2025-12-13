@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useParams, useNavigate } from 'react-router';
+import { useParams, useNavigate, Link } from 'react-router';
 import UseAxiosSecure from '../Hooks/UseAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { AuthContext } from '../Provider/AuthContext';
