@@ -1,0 +1,155 @@
+[
+  {
+    "loanImage": "https://i.ibb.co.com/NgVFsy4J/Gemini-Generated-Image-ieerilieerilieer.png",
+    "loanTitle": "Quick Personal Loan",
+    "description": "Fast personal loan for emergencies and personal needs.",
+    "category": "Personal",
+    "interestRate": "12%",
+    "maxLimit": 50000,
+    "availableEMIPlan": 12,
+    "requiredDocuments": [
+      "National ID Card",
+      "Recent Utility Bill",
+      "Income Statement"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/NgVFsy4J/Gemini-Generated-Image-ieerilieerilieer.png",
+    "loanTitle": "Small Business Loan",
+    "description": "Support your small business growth with flexible loans.",
+    "category": "Business",
+    "interestRate": "10%",
+    "maxLimit": 200000,
+    "availableEMIPlan": 24,
+    "requiredDocuments": [
+      "Trade License",
+      "NID Card",
+      "Bank Statement (6 months)",
+      "Business Ownership Proof"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/y7TysyN/Gemini-Generated-Image-y8gde1y8gde1y8gd.png",
+    "loanTitle": "Education Loan",
+    "description": "Affordable loans for higher education and tuition fees.",
+    "category": "Education",
+    "interestRate": "8%",
+    "maxLimit": 100000,
+    "availableEMIPlan": 36,
+    "requiredDocuments": [
+      "NID Card",
+      "Admission Letter",
+      "Guardian’s Income Proof"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/r2JPB1dL/Gemini-Generated-Image-z7dfxjz7dfxjz7df.png",
+    "loanTitle": "Home Renovation Loan",
+    "description": "Renovate or improve your home with low-interest loans.",
+    "category": "Home",
+    "interestRate": "11%",
+    "maxLimit": 150000,
+    "availableEMIPlan": 18,
+    "requiredDocuments": [
+      "NID Card",
+      "Home Ownership Proof",
+      "Renovation Estimate"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/mWnktj6/Gemini-Generated-Image-1upp4p1upp4p1upp.png",
+    "loanTitle": "Medical Loan",
+    "description": "Quick financial support for medical emergencies.",
+    "category": "Medical",
+    "interestRate": "9%",
+    "maxLimit": 75000,
+    "availableEMIPlan": 12,
+    "requiredDocuments": [
+      "NID Card",
+      "Hospital Estimate",
+      "Prescription or Diagnosis Report"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/xKBTC0YT/Gemini-Generated-Image-9e7bq59e7bq59e7b.png",
+    "loanTitle": "Travel Loan",
+    "description": "Plan your dream vacation without financial stress.",
+    "category": "Personal",
+    "interestRate": "13%",
+    "maxLimit": 50000,
+    "availableEMIPlan": 6,
+    "requiredDocuments": [
+      "NID Card",
+      "Travel Itinerary",
+      "Income Proof"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/Q34TFXT8/Gemini-Generated-Image-dg9twbdg9twbdg9t.png",
+    "loanTitle": "Car Loan",
+    "description": "Buy your dream car with easy EMI plans.",
+    "category": "Vehicle",
+    "interestRate": "10%",
+    "maxLimit": 300000,
+    "availableEMIPlan": 36,
+    "requiredDocuments": [
+      "NID Card",
+      "Driving License",
+      "Income Statement",
+      "Car Quotation"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/Q34TFXT8/Gemini-Generated-Image-dg9twbdg9twbdg9t.png",
+    "loanTitle": "Microloan for Startups",
+    "description": "Small loans to kickstart your startup or business idea.",
+    "category": "Business",
+    "interestRate": "14%",
+    "maxLimit": 100000,
+    "availableEMIPlan": 12,
+    "requiredDocuments": [
+      "NID Card",
+      "Startup Proposal",
+      "Bank Statement",
+      "Trade License (If available)"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/mWnktj6/Gemini-Generated-Image-1upp4p1upp4p1upp.png",
+    "loanTitle": "Wedding Loan",
+    "description": "Finance your special day with flexible EMIs.",
+    "category": "Personal",
+    "interestRate": "12%",
+    "maxLimit": 100000,
+    "availableEMIPlan": 24,
+    "requiredDocuments": [
+      "NID Card",
+      "Marriage Invitation Card",
+      "Income Proof"
+    ],
+    "applyNow": true
+  },
+  {
+    "loanImage": "https://i.ibb.co.com/Rkvs10zJ/Gemini-Generated-Image-zaoomczaoomczaoo.png",
+    "loanTitle": "Agricultural Loan",
+    "description": "Support for farmers and agricultural projects.",
+    "category": "Agriculture",
+    "interestRate": "7%",
+    "maxLimit": 150000,
+    "availableEMIPlan": 12,
+    "requiredDocuments": [
+      "NID Card",
+      "Land Ownership Document",
+      "Agricultural Plan"
+    ],
+    "applyNow": true
+  }
+]

@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "daisyui";
+#root {
+  padding: 0px;
+}
+/* Light mode reset */
+body {
+  
+  background: white;
+  color: black;
+}
+
+
+
+/* Dark mode */
+.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+/* Active button */
+.active {
+  @apply border-2 bg-gradient-to-r from-[#16578D] to-[#6da2cd] text-white rounded-2xl px-4 py-1;
+}
