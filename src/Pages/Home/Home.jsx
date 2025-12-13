@@ -15,7 +15,7 @@ const Home = () => {
       return res.data;
     },
   });
-  console.log(loans)
+ 
   return (
     <div className="max-w-11/12 mx-auto">
       <HeroSection></HeroSection>

@@ -1,86 +1,45 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/logo.png";
 import { IoIosHome } from "react-icons/io";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { AuthContext } from "../../Provider/AuthContext";
 
-const navItems = (
-  <>
-    <NavLink
-      className="mx-3 flex items-center gap-1.5 font-bold cursor-pointer text-[16px] py-1"
-      to="/"
-    >
-      <IoIosHome /> Home
-    </NavLink>
-    <NavLink
-      className="mx-3 font-bold cursor-pointer text-[16px] py-1"
-      to="/available"
-    >
-      All-Loans
-    </NavLink>
-    <NavLink
-      className="mx-3 font-bold cursor-pointer text-[16px] py-1"
-      to="/available"
-    >
-      About Us
-    </NavLink>
-    <NavLink
-      className="mx-3 font-bold cursor-pointer text-[16px] py-1"
-      to="/available"
-    >
-      Contact
-    </NavLink>
-  </>
-);
+const Navbar = ({ darkMode, toggleTheme }) => {
+  const { user, signout } = useContext(AuthContext);
 
-const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 h-[80px] shadow-sm px-4 md:px-8 flex items-center justify-between">
-      {/* Navbar start */}
-      <div className="flex items-center gap-4">
-        <div className="dropdown">
-          <div tabIndex={0} className="btn btn-ghost lg:hidden p-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-0 w-52 p-2 shadow">
-            {navItems}
-          </ul>
-        </div>
+    <div className={`navbar px-4 md:px-8 flex items-center justify-between h-[80px] shadow-sm ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
+      
+      {/* Logo */}
+      <Link className="flex items-center">
+        <img className="w-[100px] md:w-[200px] h-[150px] object-contain" src={logo} alt="Logo" />
+      </Link>
 
-        <Link className="flex items-center">
-          <img
-            className="w-[100px] md:w-[200px] h-[150px] object-contain"
-            src={logo}
-            alt="Logo"
-          />
-        </Link>
-      </div>
+      {/* Nav items */}
+      <div className="hidden lg:flex items-center gap-6">
+        <NavLink className="mx-3 font-bold cursor-pointer" to="/">Home</NavLink>
+        <NavLink className="mx-3 font-bold cursor-pointer" to="/available">All-Loans</NavLink>
+        <NavLink className="mx-3 font-bold cursor-pointer" to="/about">About Us</NavLink>
+        <NavLink className="mx-3 font-bold cursor-pointer" to="/contact">Contact</NavLink>
 
-      {/* Desktop menu */}
-      <div className="hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navItems}</ul>
-      </div>
+        {!user ? (
+          <>
+            <Link to="/login" className="btn bg-gradient-to-r from-[#16578D] to-[#6da2cd] text-white rounded-2xl px-6 py-2">Login</Link>
+            <Link to="/register" className="btn hidden md:block bg-gradient-to-r from-[#16578D] to-[#6da2cd] text-white rounded-2xl px-6 py-2">Register</Link>
+          </>
+        ) : (
+          <>
+            <NavLink className="font-bold cursor-pointer" to="/dashboard">Dashboard</NavLink>
+            <img src={user.photoURL || "https://via.placeholder.com/40"} alt="User Avatar" className="w-10 h-10 rounded-full border-2 border-gray-300" />
+            <button onClick={signout} className="btn bg-red-500 text-white rounded-2xl px-4 py-1">Logout</button>
+          </>
+        )}
 
-      {/* Navbar end */}
-      <div className="flex items-center gap-2">
-        <Link to={"/login"} className="btn bg-gradient-to-r from-[#16578D] to-[#6da2cd] text-white rounded-2xl px-6 py-2">
-          Login
-        </Link>
-        <Link to={"/register"} className="btn hidden md:block bg-gradient-to-r from-[#16578D] to-[#6da2cd] text-white rounded-2xl px-6 py-2">
-          Register
-        </Link>
+        {/* Theme toggle */}
+        <button onClick={toggleTheme} className="ml-4">
+          {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+        </button>
       </div>
     </div>
   );

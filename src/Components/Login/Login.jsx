@@ -35,7 +35,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-[#f5f7fb] px-4 py-10">
+    <div className="min-h-screen flex justify-center items-center bg-[#f5f7fb] px-4 py-10 ">
       <div className="w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row">
 
         {/* LEFT */}
@@ -53,7 +53,7 @@ const Login = () => {
         </div>
 
         {/* RIGHT */}
-        <div className="md:w-1/2 w-full p-8 md:p-14">
+        <div className="md:w-1/2 w-full p-8 md:p-14 ">
           <h2 className="text-2xl md:text-3xl font-bold mb-8">
             Login to Your Account 👤
           </h2>
