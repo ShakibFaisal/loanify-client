@@ -85,6 +85,7 @@ const DashBoardLayout = () => {
               </Link>
               
             </li>
+            
              <li>
               <Link
                 className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
@@ -93,6 +94,83 @@ const DashBoardLayout = () => {
               >
                 <FaUser />
                 <span className="is-drawer-close:hidden">User Management</span>
+              </Link>
+              
+            </li>
+             <li>
+              <Link
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="All Loans"
+                to="/dashboard/all-loans"
+              >
+                <FaMoneyBillWave />
+                <span className="is-drawer-close:hidden">All Loans</span>
+              </Link>
+              
+            </li>
+            <li>
+              <Link
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Loan Applications"
+                to="/dashboard/loan-applications"
+              >
+                <FaMoneyBillWave />
+                <span className="is-drawer-close:hidden">Loan Applications</span>
+              </Link>
+              
+            </li>
+             <li>
+              <Link
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Add Loan"
+                to="/dashboard/add-loan"
+              >
+                <FaMoneyBillWave />
+                <span className="is-drawer-close:hidden">Add Loan</span>
+              </Link>
+              
+            </li>
+             <li>
+              <Link
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Manage Loans"
+                to="/dashboard/manage-loans"
+              >
+                <FaMoneyBillWave />
+                <span className="is-drawer-close:hidden">Manage Loans</span>
+              </Link>
+              
+            </li>
+             <li>
+              <Link
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Pending Loans"
+                to="/dashboard/pending-loans"
+              >
+                <FaMoneyBillWave />
+                <span className="is-drawer-close:hidden">Pending-Loans</span>
+              </Link>
+              
+            </li>
+             <li>
+              <Link
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Approved Loans"
+                to="/dashboard/approved-loans"
+              >
+                <FaMoneyBillWave />
+                <span className="is-drawer-close:hidden">Approved-Loans</span>
+              </Link>
+              
+            </li>
+             <li>
+              <Link
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Profile"
+                to="/dashboard/profile"
+              >
+                <FaMoneyBillWave />
+                <span className="is-drawer-close:hidden">Profile</span>
               </Link>
               
             </li>

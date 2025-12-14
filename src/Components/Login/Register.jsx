@@ -109,6 +109,7 @@ const Register = () => {
               <select value={role} onChange={(e) => setRole(e.target.value)} className="w-full border rounded-lg px-4 py-3 mt-1 outline-none" required>
                 <option value="borrower">Borrower</option>
                 <option value="manager">Manager</option>
+               
               </select>
             </div>
 
