@@ -4,10 +4,12 @@ import { FcGoogle } from "react-icons/fc";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../Provider/AuthContext";
+import UseAxiosSecure from "../../Hooks/UseAxiosSecure";
 
 const Register = () => {
   const { createUserEP, googleLogin, updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  const axiosSecure = UseAxiosSecure()
 
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -37,14 +39,20 @@ const Register = () => {
       // Update display name & photo
       await updateUser(name, photo);
 
-      // Optional: Save role to database if needed
-      // await saveUserRoleToDB(email, selectedRole);
+     const userInfo = {
+      name,
+      email,
+      photo,
+      role: selectedRole,
+    };
 
-      toast.success("Registered Successfully ✅");
-      navigate("/login");
-    } catch (err) {
-      toast.error(err.message);
-    }
+    await axiosSecure.post("users", userInfo);
+
+    toast.success("Registered Successfully ✅");
+    navigate("/login");
+  } catch (err) {
+    toast.error(err.message);
+  }
   };
 
   const handleGoogleRegister = async () => {

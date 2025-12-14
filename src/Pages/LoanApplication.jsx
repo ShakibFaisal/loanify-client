@@ -98,7 +98,7 @@ const LoanApplication = () => {
     try {
       await axiosSecure.post("/loan-applications", applicationData);
       toast.success("Loan application submitted successfully ✅");
-    //   navigate("/my-loans");
+      navigate("/dashboard/my-loans");
     } catch {
       toast.error("Failed to submit loan application ❌");
     }

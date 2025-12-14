@@ -8,6 +8,9 @@ import LoanDetails from "../Pages/LoanDetails";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import DashBoardLayout from "../Layout/DashBoardLayout";
 import LoanApplication from "../Pages/LoanApplication";
+import MyLoans from "../Pages/Dashboard/MyLoans";
+import DashboardHome from "../Pages/Dashboard/DashboardHome";
+import UsersManagement from "../Pages/Dashboard/UserManagement";
 
 
 export const router = createBrowserRouter([
@@ -41,7 +44,15 @@ export const router = createBrowserRouter([
     element:<PrivetRoute><DashBoardLayout></DashBoardLayout></PrivetRoute>,
     children:[{
       index:true,
+      Component:DashboardHome
+    },{
+      path:"my-loans",
+      Component:MyLoans
       
+    },{
+      path:"user-management",
+      element:<UsersManagement></UsersManagement>
+
     }]
   }
 ]);
