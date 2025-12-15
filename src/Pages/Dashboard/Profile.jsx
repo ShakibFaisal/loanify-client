@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthContext";
+
 import { useNavigate } from "react-router";
+import { AuthContext } from "../../Provider/AuthContext";
 
 const Profile = () => {
-  const { user, logout } = useContext(AuthContext);
+  const { user, signout } = useContext(AuthContext);
   const navigate = useNavigate();
  console.log(user)
   const handleLogout = async () => {
     try {
-      await logout();
-      navigate("/login"); // redirect to login page
+      await signout();
+      navigate("/login"); 
     } catch (err) {
       console.error("Logout failed:", err);
     }

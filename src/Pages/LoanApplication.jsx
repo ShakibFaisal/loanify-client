@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { AuthContext } from "../Provider/AuthContext";
 import UseAxiosSecure from "../Hooks/UseAxiosSecure";
+import Loader from "../Components/Loader/Loader";
 
 // Reusable Input Field Component
 const InputField = ({ label, name, value, onChange, type = "text", readOnly = false, required = false }) => (
@@ -74,7 +75,7 @@ const LoanApplication = () => {
     }
   }, [user, navigate]);
 
-  if (loading) return <p className="text-center mt-10">Loading...</p>;
+  if (loading) return <Loader></Loader>;
   if (!loan) return <p className="text-center mt-10 text-red-600">Loan not found</p>;
 
   const handleChange = (e) => {

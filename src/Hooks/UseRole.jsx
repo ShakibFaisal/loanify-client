@@ -6,7 +6,7 @@ import UseAxiosSecure from './UseAxiosSecure';
 import { AuthContext } from '../Provider/AuthContext';
 
 
-const useRole = () => {
+const UseRole = () => {
     const { user } = useContext(AuthContext);
     const axiosSecure = UseAxiosSecure();
 
@@ -22,4 +22,4 @@ const useRole = () => {
     return { role, roleLoading };
 };
 
-export default useRole;
+export default UseRole;

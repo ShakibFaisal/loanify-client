@@ -20,6 +20,9 @@ import ManageLoans from "../Pages/Dashboard/ManageLoans";
 import PendingLoans from "../Pages/Dashboard/PendingLoans";
 import ApprovedLoans from "../Pages/Dashboard/ApprovedLoans";
 import Profile from "../Pages/Dashboard/Profile";
+import PaymentSuccess from "../Pages/Dashboard/Payment/PaymentSuccess";
+import AboutUs from "../Pages/About";
+import ContactUs from "../Pages/ContactUs";
 
 
 export const router = createBrowserRouter([
@@ -46,6 +49,12 @@ export const router = createBrowserRouter([
       },{
         path:"loan-application/:id",
         Component:LoanApplication
+      },{
+        path:"about",
+        Component:AboutUs
+      },{
+        path:"contact",
+        Component:ContactUs
       }
     ]
   },{
@@ -83,6 +92,9 @@ export const router = createBrowserRouter([
     },{
       path:"profile",
       element:<Profile></Profile>
+    },{
+      path:"payment-success",
+      element:<PaymentSuccess></PaymentSuccess>
     }]
   }
 ]);

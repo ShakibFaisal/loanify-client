@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router';
 import UseAxiosSecure from '../Hooks/UseAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { AuthContext } from '../Provider/AuthContext';
+import Loader from '../Components/Loader/Loader';
 
 const LoanDetails = () => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const LoanDetails = () => {
     },
   });
 
-  if (isLoading) return <p className="text-center mt-10">Loading loan details...</p>;
+  if (isLoading) return <Loader></Loader>;
   if (isError) return <p className="text-center mt-10 text-red-600">Error: {error.message}</p>;
 
   // Determine if Apply Now button should be enabled
