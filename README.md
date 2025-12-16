@@ -3,7 +3,7 @@
 ## Project Overview
 **Loanify** is a modern web application designed to simplify **microloan management** for NGOs, small financial organizations, and individual users. The platform allows users to apply for loans, track loan status, and provides administrators with tools to manage loan applications efficiently.  
 
-**Live Demo:** [Your Live URL Here](https://your-live-url.com)
+**Live Demo:** https://loanify-8951e.web.app/
 
 ---
 
