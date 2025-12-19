@@ -19,7 +19,7 @@ const MainLayout = () => {
   }, [darkMode]);
 
   return (
-    <div className={`${darkMode ? "bg-black text-white" : "bg-white text-black"} min-h-screen`}>
+    <div className="bg-base-100 text-base-content">
       {/* Sticky Navbar */}
       <header className="sticky top-0 z-50">
         <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />

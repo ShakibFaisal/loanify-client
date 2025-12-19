@@ -36,35 +36,35 @@ const CustomerFeedback = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-11/12 mx-auto text-center">
+    <section className="py-16 bg-base-100 transition-colors duration-300">
+      <div className="max-w-11/12 mx-auto text-center px-4">
 
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-base-content">
           Customer Feedback
         </h2>
-        <p className="text-gray-600 mt-3">
+        <p className="text-base-content/70 mt-3">
           What our customers say about us
         </p>
 
         {/* Carousel */}
         <div className="relative mt-12 max-w-3xl mx-auto">
-          <div className="bg-gray-50 p-8 rounded-2xl shadow-md transition-all duration-500">
+          <div className="bg-base-200 p-8 rounded-2xl shadow-md transition-all duration-500">
             <img
               src={testimonials[current].image}
               alt={testimonials[current].name}
-              className="w-20 h-20 rounded-full mx-auto border-4 border-blue-500"
+              className="w-20 h-20 rounded-full mx-auto border-4 border-primary"
             />
 
-            <p className="text-gray-700 mt-6 italic">
+            <p className="text-base-content mt-6 italic">
               “{testimonials[current].feedback}”
             </p>
 
-            <h4 className="mt-4 text-lg font-semibold text-gray-800">
+            <h4 className="mt-4 text-lg font-semibold text-base-content">
               {testimonials[current].name}
             </h4>
 
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-base-content/70">
               {testimonials[current].role}
             </span>
           </div>
@@ -77,8 +77,8 @@ const CustomerFeedback = () => {
                 onClick={() => setCurrent(index)}
                 className={`w-3 h-3 rounded-full transition ${
                   index === current
-                    ? "bg-blue-600"
-                    : "bg-gray-300"
+                    ? "bg-primary"
+                    : "bg-base-content/30"
                 }`}
               ></button>
             ))}

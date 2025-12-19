@@ -1,22 +1,55 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+
+  /* Brand */
+  --color-primary: #2563eb;      /* Blue (Buttons, CTA) */
+  --color-secondary: #14b8a6;    /* Teal (Accent) */
+  --color-accent: #22c55e;       /* Success / Approval */
+
+  /* Backgrounds */
+  --color-base-100: #ffffff;     /* Page background */
+  --color-base-200: #f3f4f6;     /* Card background */
+  --color-base-300: #e5e7eb;     /* Borders */
+
+  /* Text */
+  --color-base-content: #1f2937; /* Main text */
+
+  /* Status */
+  --color-info: #0ea5e9;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+}
+@plugin "daisyui/theme" {
+  name: "dark";
+
+  /* Brand */
+  --color-primary: #60a5fa;      /* Soft Blue */
+  --color-secondary: #5eead4;    /* Soft Teal */
+  --color-accent: #4ade80;       /* Success */
+
+  /* Backgrounds */
+  --color-base-100: #0f172a;     /* Page background */
+  --color-base-200: #1e293b;     /* Cards */
+  --color-base-300: #334155;     /* Borders */
+
+  /* Text */
+  --color-base-content: #e5e7eb; /* Light text */
+
+  /* Status */
+  --color-info: #38bdf8;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+}
+
 #root {
   padding: 0px;
 }
-/* Light mode reset */
-body {
-  
-  background: white;
-  color: black;
-}
 
-
-
-/* Dark mode */
-.dark {
-  background: #1e1e1e;
-  color: white;
-}
 
 /* Active button */
 .active {

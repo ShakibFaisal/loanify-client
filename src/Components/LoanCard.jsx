@@ -5,7 +5,7 @@ const LoanCard = ({ loan }) => {
   const { loanImage, loanTitle, description, maxLimit, _id } = loan;
 
   return (
-    <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+    <div className="bg-base-200 rounded-2xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
       {/* Image */}
       <img
         src={loanImage}
@@ -15,11 +15,11 @@ const LoanCard = ({ loan }) => {
 
       {/* Content */}
       <div className="p-5 space-y-3">
-        <h2 className="text-xl font-semibold text-gray-800">{loanTitle}</h2>
+        <h2 className="text-xl font-semibold text-accent">{loanTitle}</h2>
 
-        <p className="text-gray-600 text-sm line-clamp-2">{description}</p>
+        <p className="text-base-content text-sm line-clamp-2">{description}</p>
 
-        <p className="text-sm font-medium text-gray-700">
+        <p className="text-sm font-medium text-base-content">
           Max Loan Limit:{" "}
           <span className="text-blue-600 font-semibold">
             ৳{maxLimit.toLocaleString()}

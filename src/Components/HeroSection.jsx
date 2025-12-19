@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 import img1 from "../assets/pic1 (1).png";
 import img2 from "../assets/pic2.png";
 import img3 from "../assets/pic3.png";
-import { Link } from "react-router";
 
-// Hero slides
 const slides = [
   {
     text: "Simplify Microloan Management with Loanify.",
@@ -25,7 +24,6 @@ const slides = [
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
 
-  // Auto-change slides every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -36,36 +34,34 @@ const HeroSection = () => {
   const slide = slides[current];
 
   return (
-    <div className="w-full h-[70vh] my-5 flex items-center justify-center bg-gray-50 overflow-hidden">
+    <section className="w-full h-[70vh] my-5 flex items-center justify-center bg-base-100 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 h-full">
-        {/* Text */}
+        
+        {/* TEXT */}
         <motion.div
-          key={current} 
+          key={current}
           initial={{ x: -200, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -200, opacity: 0 }}
           transition={{ duration: 1 }}
           className="md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center h-full"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-base-content mb-6">
             {slide.text}
           </h1>
 
-        
           <Link
             to="/available"
-            className="text-center w-[140px] bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:scale-105"
+            className="btn btn-primary w-[160px] rounded-lg shadow-lg hover:scale-105 transition-transform"
           >
             Available Loan
           </Link>
         </motion.div>
 
- 
+        {/* IMAGE */}
         <motion.div
           key={current + "-img"}
           initial={{ x: 200, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: 200, opacity: 0 }}
           transition={{ duration: 1 }}
           className="md:w-1/2 h-full flex items-center justify-center"
         >
@@ -76,7 +72,7 @@ const HeroSection = () => {
           />
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,16 +8,20 @@ import CustomerFeedback from "./CustomerFeedback/CustomerFeedback";
 
 import AboutUsSection from "./AboutUsSection";
 import Testimonials from "./TestiMonials";
+import Loader from "../../Components/Loader/Loader";
 
 const Home = () => {
   const axiosSecure = UseAxiosSecure();
-  const  { data: loans = [] } = useQuery({
+  const  { data: loans = [],isLoading } = useQuery({
      queryKey: ['loans'],
     queryFn: async () => {
       const res = await axiosSecure.get(`loans-sort`);
       return res.data;
     },
   });
+  if(isLoading){
+    return <Loader></Loader>
+  }
  
   return (
     <div className="max-w-11/12 mx-auto">

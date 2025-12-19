@@ -29,14 +29,14 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-base-200 rounded-2xl my-10">
       <div className="max-w-11/12 mx-auto text-center">
         
         {/* Section Header */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-base-content">
           How It Works
         </h2>
-        <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+        <p className="text-base-content mt-3 max-w-2xl mx-auto">
           Get your loan in just a few simple steps
         </p>
 
@@ -45,17 +45,17 @@ const HowItWorks = () => {
           {steps.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300"
+              className="bg-base-300 rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300"
             >
               <div className="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-blue-100 text-blue-600 text-xl font-bold">
                 {item.step}
               </div>
 
-              <h3 className="text-xl font-semibold mt-4 text-gray-800">
+              <h3 className="text-xl font-semibold mt-4 text-base-content">
                 {item.title}
               </h3>
 
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-base-content/70 mt-2 text-sm">
                 {item.description}
               </p>
             </div>

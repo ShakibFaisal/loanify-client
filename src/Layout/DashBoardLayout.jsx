@@ -84,7 +84,7 @@ const DashBoardLayout = () => {
                 <Link
                   to={"/"}
                   data-tip="Home"
-                  className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                  className="is-drawer-close:tooltip is-drawer-close:tooltip-right flex items-center gap-1.5"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

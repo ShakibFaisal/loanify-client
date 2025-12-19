@@ -23,7 +23,8 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto my-12 bg-white rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 overflow-hidden flex flex-col md:flex-row">
+    <div className="max-w-5xl mx-auto my-12 bg-base-100 rounded-xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 overflow-hidden flex flex-col md:flex-row">
+
       {/* Left Image */}
       <div className="md:w-1/2">
         <img
@@ -35,15 +36,18 @@ const ContactUs = () => {
 
       {/* Right Form */}
       <div className="md:w-1/2 p-10 flex flex-col justify-center">
-        <h2 className="text-3xl font-bold mb-4 text-gray-800">Contact Us</h2>
-        <p className="mb-6 text-gray-600">
+        <h2 className="text-3xl font-bold mb-4 text-base-content">
+          Contact Us
+        </h2>
+        <p className="mb-6 text-base-content/70">
           Have questions or feedback? We'd love to hear from you!
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
+
           {/* Name */}
           <div className="relative">
-            <FaUser className="absolute top-3 left-3 text-gray-400" />
+            <FaUser className="absolute top-3 left-3 text-base-content/50" />
             <input
               type="text"
               name="name"
@@ -51,13 +55,13 @@ const ContactUs = () => {
               onChange={handleChange}
               placeholder="Your Name"
               required
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition"
+              className="w-full pl-10 pr-3 py-3 border border-base-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition"
             />
           </div>
 
           {/* Email */}
           <div className="relative">
-            <FaEnvelope className="absolute top-3 left-3 text-gray-400" />
+            <FaEnvelope className="absolute top-3 left-3 text-base-content/50" />
             <input
               type="email"
               name="email"
@@ -65,13 +69,13 @@ const ContactUs = () => {
               onChange={handleChange}
               placeholder="Your Email"
               required
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition"
+              className="w-full pl-10 pr-3 py-3 border border-base-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition"
             />
           </div>
 
           {/* Message */}
           <div className="relative">
-            <FaCommentDots className="absolute top-3 left-3 text-gray-400" />
+            <FaCommentDots className="absolute top-3 left-3 text-base-content/50" />
             <textarea
               name="message"
               value={formData.message}
@@ -79,14 +83,14 @@ const ContactUs = () => {
               placeholder="Your Message"
               required
               rows={5}
-              className="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition resize-none"
+              className="w-full pl-10 pr-3 py-3 border border-base-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition resize-none"
             ></textarea>
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition shadow-md"
+            className="bg-primary text-base-100 px-6 py-3 rounded-lg hover:bg-primary/90 transition shadow-md"
           >
             Send Message
           </button>
